@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --border:1px solid black;
+}
+/*Navigation bar*/
+.navbar{
+    display: flex;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+}
+.navbar  ul{
+    list-style-type: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.links{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.links a{
+    display: inline-block;
+    padding: 40px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: larger;
+    text-transform: uppercase;
+}
+.social-media{
+    flex-basis: 20%;
+}
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-media>span{
+    padding: 10px 15px;
+    border-radius: 100%;
+    font-size: xx-large;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgb(184, 184, 184);
+}
+
+/*Intro body*/
+
+.intro-container{
+    height: 800px;
+    position: relative;
+}
+#profile{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    height: auto;
+    width: 300px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#img-container{
+    height: 330px;
+    width: 330px;
+    position: absolute;
+    top: 60%;
+    right: 9%;
+    transform: translateY(-50%);
+    box-shadow: -5px -10px 10px rgb(156, 156, 156);
+    border-radius: 100%;
+}
+.intro-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    height: 250px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.intro-p{
+    height: 20px;
+    overflow: hidden;
+}
+.intro-text p{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(156, 156, 156);
+    width: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    overflow: hidden;  
+    animation-name: typewriter;
+    animation-timing-function: linear;
+}
+.intro-text h1{
+    font-size: 56px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-family: 'Cairo', sans-serif;
+}
+.intro-text p::after{
+    content: "";
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgba(0, 0, 255,0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.p1 p{
+    animation-duration: 2s;
+}
+.p2 p{
+    animation-duration: 4s;
+}
+.p3 p{
+    animation-duration: 6s;
+}
+@keyframes typewriter{
+    0%,50%{
+        width: 2px;
+    }
+    75%,100%{
+        width: 280px;
+    }
+}
+
+/*About section*/
+#before-about{
+    height: 105px;
+}
+#about-container{
+    height: 600px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: large;
+    padding: 30px 50px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(61, 114, 164);
+    border-radius: 10px;
+}
+#about-container>h2{
+    text-align: center;
+    font-size: xxx-large;
+    text-transform: uppercase;
+}
+#about-container>li{
+    padding: 0px 80px;
+}
+.batches-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.batch{
+    height: 150px;
+    width: 150px;
+}
+.batch img{
+    width: 100%;
+}
+
+/*Skills section*/
+#before-skills{
+    height: 105px;
+}
+#skills-container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+.skill-header{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-right: var(--border);
+}
+.skill-header h2{
+    text-align: center;
+    font-size: xxx-large;
+    text-transform: uppercase;
+    padding: 0px 20px;
+}
+#skills-container2{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill{
+    height: 400px;
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+}
+.skill-content-div,.skill-img-div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.skill-content-div h3{
+    margin: auto;
+    font-size: 24px;
+}
+.skill-img-div img{
+    width: 100%;
+    height: auto;
+}
+
+/*Certificates and Github*/
+#before-cerandgit{
+    height: 105px;
+}
+#cerandgit-container{
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+#cerandgit-container2{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#certificate-container,#github-container{
+    height: 600px;
+    width: 35%;
+    padding:30px 20px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow:0px 0px 10px #0099CC;
+}
+#certificate-container > .header,#github-container > .header{
+    text-align: center;
+}
+#certificate-container li,#github-container p{
+    color: rgb(85, 85, 85);
+    font-size: smaller;
+}
+#certificate-container li,#github-container a{
+    font-size: larger;
+}
+
+/*Publication section*/
+#before-publication{
+    height: 105px;
+}
+#publication-container{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+#publication-container2{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:auto;
+}
+#books,#blogs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+.books-header,.blogs-header{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-right: var(--border);
+}
+#books-container,#blogs-container{
+    width: 500px;
+    height: 700px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(146, 146, 146);
+}
+#books-container p,#blogs-container p{
+    color: rgb(85, 85, 85);
+    font-size: smaller;
+}
+
+/*Footer*/
+#footer{
+    background-color: grey;
+    color: white;
+    font-size: smaller;
+    height: 100px;
+    text-align: center;
+}
