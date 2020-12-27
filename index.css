@@ -7,7 +7,7 @@
     --border:1px solid black;
 }
 /*Navigation bar*/
-.navbar{
+.navibar{
     display: flex;
     position:fixed;
     top: 0;
@@ -15,11 +15,15 @@
     width: 100%;
     z-index: 99;
     background-color: white;
+    border: var(--border);
 }
-.navbar  ul{
+.navibar *{
+    border: var(--border);
+}
+.navibar  ul{
     list-style-type: none;
 }
-.navbar a{
+.navibar a{
     text-decoration: none;
     color: black;
 }
@@ -56,8 +60,12 @@
 .intro-container{
     height: 800px;
     position: relative;
+    border: var(--border);
 }
-#profile{
+.intro-container *{
+    border: var(--border);
+}
+#profile-container{
     position: absolute;
     top: 50%;
     right: 10%;
@@ -66,6 +74,10 @@
     width: 300px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+#profile{
+    width: 100%;
+    height: auto;
 }
 #img-container{
     height: 330px;
@@ -144,6 +156,7 @@
     height: 105px;
 }
 #about-container{
+    overflow: hidden;
     height: 600px;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
@@ -316,4 +329,54 @@
     font-size: smaller;
     height: 100px;
     text-align: center;
+}
+
+/*Responsive section*/
+@media screen and (max-width:480px){
+    .social-media{
+        display: none;
+    }
+    .links{
+        display: none;
+    }
+
+
+    .intro-container{
+        height: 100vh;
+        position: relative;
+        border: var(--border);
+    }
+    .intro-container *{
+        border: var(--border);
+    }
+    #profile-container{
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 50%;
+    }
+    #img-container{
+        height: 175px;
+        width: 175px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .intro-text{
+        position: absolute;
+        top: 70%;
+        left: 0;
+        transform: translate(0,-50%);
+        height: 200px;
+    }
+    .intro-text h1{
+        font-size: 34px;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+    }
+}
+@media screen and (min-width:480px){
+    .navbar{
+        display: none;
+    }
 }
