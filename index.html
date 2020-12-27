@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans;Cairo:wght@600&family=Roboto;&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f6c45c778e.js" crossorigin="anonymous"></script>
@@ -14,7 +17,7 @@
 </head>
 <body>
     <!--Navigation bar-->
-    <div class="navbar">
+    <div class="navibar">
         <ul class="links">
             <li><a href="#before-about">About</a></li>
             <li><a href="#before-skills">Skills</a></li>
@@ -26,6 +29,27 @@
             <span><a href="https://www.linkedin.com/in/justgoodin/"><i class="fab fa-linkedin-in"></i></a></span>
             <span><a href="https://github.com/justgoodin"><i class="fab fa-github"></i></a></span>
         </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">R. Haider</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#before-about">About</a></li>
+                    <li><a href="#before-skills">Skills</a></li>
+                    <li><a href="#before-cerandgit">Certifications</a></li>
+                    <li><a href="#before-cerandgit">Github</a></li>
+                    <li><a href="#before-publication">Publications</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </div>
 
     <!--intro body-->
@@ -43,7 +67,9 @@
             </div>
         </div>
         <div id="img-container"></div>
-        <img id="profile" src="profile.png" alt="Profile photo">
+        <div id="profile-container">
+            <img id="profile" src="profile.png" alt="Profile photo">
+        </div>
     </div>
 
     <!--About section-->
