@@ -333,14 +333,15 @@
 
 /*Responsive section*/
 @media screen and (max-width:770px){
-    .social-media{
+    .navibar{
+        width: 100vw;
+    }
+    .navbar{
+        width: 100%;
+    }
+    .social-media,.links{
         display: none;
     }
-    .links{
-        display: none;
-    }
-
-
     .intro-container{
         height: 100vh;
         position: relative;
@@ -356,8 +357,8 @@
         width: 50%;
     }
     #img-container{
-        height: 175px;
-        width: 175px;
+        height: 40%;
+        width: 50%;
         top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -368,6 +369,8 @@
         left: 0;
         transform: translate(0,-50%);
         height: 200px;
+        align-items: center;
+        width: 100%;
     }
     .intro-text h1{
         font-size: 34px;
